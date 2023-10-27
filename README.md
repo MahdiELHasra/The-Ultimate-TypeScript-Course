@@ -39,3 +39,5 @@ To optimize the TypeScript compiler we have the option to adjust parameters in a
 ## Course Overview
 
 Now that we have a basic understanding of TypeScript and its role in modern web development, let's take a sneak peek at what you'll learn in this course:
+
+- **Module 1. [Introduction, to TypeScript](./1%20Fundamentals/README.md) ;** Begin by exploring the fundamentals, including variables, data types, functions and other essential concepts.
