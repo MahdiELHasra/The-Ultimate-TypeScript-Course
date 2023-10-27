@@ -35,3 +35,7 @@ Web browsers are unable to comprehend TypeScript which is why we rely on the Typ
 ### Configuring TypeScript
 
 To optimize the TypeScript compiler we have the option to adjust parameters in a configuration file called `tsconfig.json`. This file enables us to tailor the compilation process according to our projects requirements.
+
+## Course Overview
+
+Now that we have a basic understanding of TypeScript and its role in modern web development, let's take a sneak peek at what you'll learn in this course:
