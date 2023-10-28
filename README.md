@@ -43,3 +43,5 @@ Now that we have a basic understanding of TypeScript and its role in modern web 
 - **Module 1. [Introduction to TypeScript](./1%20Fundamentals/README.md) :** Begin by exploring the fundamentals, including variables, data types, functions and other essential concepts.
 
 - **Module 2 - [Advanced Types](./2%20Advanced%20Types/README.md) :** Delve into advanced type concepts.
+
+- **Module 3 - [Classes, Interfaces, and Object-oriented Programming](./3%20Classes%20and%20Interfaces/README.md) :** Dive into object-oriented programming principles and best practices.
