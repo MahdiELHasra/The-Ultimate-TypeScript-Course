@@ -81,3 +81,24 @@ class Account {
   constructor(public readonly id: number, private _balance: number) {}
 }
 ```
+
+## Getters and setters:
+
+As, in JavaScript you have the ability to utilize getters and setters for managing access, to the properties of a class. Getters are employed to `retrieve` the value of a property whereas setters are used for `assigning` a value to a property.
+
+```ts
+class Account {
+  private _balance = 0;
+
+  get balance(): number {
+    return this._balance;
+  }
+
+  set balance(value: number) {
+    if (value < 0) {
+      throw new Error("Balance cannot be negative.");
+    }
+    this._balance = value;
+  }
+}
+```
