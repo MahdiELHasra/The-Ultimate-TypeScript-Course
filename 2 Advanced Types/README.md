@@ -54,3 +54,56 @@ let textBox: UIWidget = {
   resize: () => {},
 };
 ```
+
+## Literal types:
+
+Literal types in TypeScript allow you to specify that a variable or parameter must have a `specific, exact` value.
+
+```ts
+let qte: 50 | 100 = 50;
+```
+
+```ts
+type Quantity = 50 | 100;
+let quantity: Quantity = 100;
+```
+
+```ts
+type Metric = "cm" | "inch";
+```
+
+## Nullable types:
+
+Nullable types are a way to indicate that a variable can have a value of a type or be empty represented by either `null` or `undefined`. We use the union type operator `|` to combine the type with the possibility of being null or undefined.
+
+```ts
+let greet = (name: string | null | undefined) => {
+  if (name) console.log(`Hello ${name}`);
+  else console.log("Hallo");
+};
+
+greet(null); // Output: "Hallo"
+greet(undefined); // Output: "Hallo"
+greet("Mahdi"); // Output: "Hello Mahdi"
+```
+
+## Optional Chaining (?.):
+
+Using optional chaining `(?.)` we can simplify our code and remove the need for null checks.
+
+```ts
+type Customer = {
+  birthday?: Date;
+};
+function getCostumer(id: number): Customer | null | undefined {
+  return id === 0 ? null : { birthday: new Date() };
+}
+let customer = getCostumer(1);
+// Optional property access operator
+console.log(customer?.birthday?.getFullYear());
+// Optional element access operator
+customer?.[1];
+//Optional Call
+let log: any = null;
+log?.("a");
+```
