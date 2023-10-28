@@ -126,3 +126,14 @@ let employee: {
   },
 };
 ```
+
+## Compiler Options:
+
+Compiler options in TypeScript, for configuring the behavior of the TypeScript compiler can be utilized to customize the compilation process according to your project requirements. These options can be configured in your `tsconfig.json` file.
+
+| Option               | Description                                                                                                                                                                     |
+| -------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `noImplicitAny `     | When enabled, the compiler will warn you about variablesthat are inferred with the any type. You’ll then have toexplicitly annotate them with any if you have a reason todo so. |
+| `noImplicitReturns`  | When enabled, the compiler will check all code paths in a function to ensure they return a value.                                                                               |
+| `noUnusedLocals`     | When enabled, the compiler will report unused local variables.                                                                                                                  |
+| `noUnusedParameters` | When enabled, the compiler will report unused parameters.                                                                                                                       |
