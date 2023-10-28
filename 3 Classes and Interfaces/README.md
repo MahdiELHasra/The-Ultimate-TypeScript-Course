@@ -44,3 +44,28 @@ account.deposit(100);
 console.log(typeof account);
 console.log(account instanceof Account);
 ```
+
+#### Read-only and optional properties:
+
+```ts
+class Account {
+  readonly id: number;
+  nickname?: string;
+}
+```
+
+## Access modifiers:
+
+Access modifiers are words used to manage the `visibility` and `accessibility` of class members (such, as properties and methods) from, outside the class. They allow you to enforce `encapsulation` and `control access`, which improves the `security` and `maintainability` of your code.
+
+We use access modiﬁers (`public`, `private`, `protected`) to control access to properties and
+methods of a class.
+
+```ts
+class Account {
+  private _balance: number;
+  // Protected members are inherited.
+  // Private members are not.
+  protected _taxRate: number;
+}
+```
