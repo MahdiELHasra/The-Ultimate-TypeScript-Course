@@ -69,3 +69,15 @@ class Account {
   protected _taxRate: number;
 }
 ```
+
+## Parameter properties:
+
+Parameter properties are a feature that lets you `combine` constructor `parameters` with `property` declarations, in a concise and convenient manner. They allow you to declare and `initialize` class properties within the parameter list of the constructor, which reduces the need, for property declarations and assignments. Parameter properties come in handy when you want to create class properties based on the values passed to the constructor.
+
+```ts
+class Account {
+  // With parameter properties we can
+  // create and initialize properties in one place.
+  constructor(public readonly id: number, private _balance: number) {}
+}
+```
