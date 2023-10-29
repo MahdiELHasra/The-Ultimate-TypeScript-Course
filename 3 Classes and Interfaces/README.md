@@ -179,3 +179,63 @@ class Circle extends Shape {
 }
 ```
 
+## Interfaces:
+
+In TypeScript interfaces serve as a blueprint or agreement that outlines the structure of objects or classes. They define the required names, types and optional methods that an object or class should abide by. By utilizing interfaces you can enforce a structure within your code ensuring that objects or classes adhere to shapes or agreements. This feature of TypeScript interfaces plays a role, in achieving static typing and effective type checking in your codebase.
+
+```ts
+interface Person {
+  firstName: string;
+  lastName: string;
+  sayHello(): string;
+}
+
+// Implementing an object that adheres to the Person interface
+const person: Person = {
+  firstName: "Mahdi",
+  lastName: "EL HASRA",
+  sayHello: () => {
+    return `Hello, my name is ${person.firstName} ${person.lastName}.`;
+  },
+};
+
+console.log(person.sayHello()); // Output: "Hello, my name is Mahdi EL HASRA."
+```
+
+### Interfaces vs Types:
+
+In TypeScript, interfaces and type aliases can be used interchangeably.
+
+Both can be used to describe the shape of an object:
+
+##### Interfaces
+
+```ts
+interface Person {
+  name: string;
+}
+let person: Person = {
+  name: "Mahdi",
+};
+```
+
+##### Type
+
+```ts
+type Person = {
+  name: string;
+};
+
+let person: Person = {
+  name: "Mahdi",
+};
+```
+
+A class can also implement an interface or a type alias:
+
+```ts
+class MyCalendar extends MyInterface {}
+class MyCalendar extends MyType {}
+```
+
+> It’s more conventional to use an interface in front of the extends keyword, though.
