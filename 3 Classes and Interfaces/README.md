@@ -119,3 +119,34 @@ let seats = new SeatAssignment();
 seats.A1 = "Mosh";
 seats.A2 = "John";
 ```
+
+## Static members:
+
+Static members refer to the properties or methods associated with a class itself than specific instances of the class. Unlike instance members static members cannot be accessed through class instances. Can only be accessed using the class name. They are commonly used to define properties or methods that are shared among all instances of a class or to perform utility operations related to the class itself.
+
+To access members we simply use the name of the class. They come in handy when we only need one instance of a class member (property or method) in memory.
+
+```ts
+class Ride {
+  static activeRides = 0;
+}
+Ride.activeRides++;
+```
+
+## Inheritance:
+
+Inheritance allows a class to inherit and reuse members of another class. The providing
+class is called the parent, super or base class while the other class is called the child, sub or
+derived class.
+
+```ts
+class Cat extends Animal {
+  constructor(name: string) {
+    super(name);
+  }
+
+  meow(): void {
+    this.makeSound("meow");
+  }
+}
+```
