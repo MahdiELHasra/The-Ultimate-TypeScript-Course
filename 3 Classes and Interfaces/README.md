@@ -82,7 +82,7 @@ class Account {
 }
 ```
 
-## Getters and setters:
+## Getters and Setters:
 
 As, in JavaScript you have the ability to utilize getters and setters for managing access, to the properties of a class. Getters are employed to `retrieve` the value of a property whereas setters are used for `assigning` a value to a property.
 
@@ -101,4 +101,21 @@ class Account {
     this._balance = value;
   }
 }
+```
+
+## Index signatures:
+
+Index signatures enable you to create objects, with keys of a type and related values of another type. They prove to be quite handy when you wish to construct objects with property names like how one would utilize a dictionary or map, in other programming languages.
+
+```ts
+class SeatAssignment {
+  // With index signature properties we can add
+  // properties to an object dynamically
+  // without losing type safety.
+  [seatNumber: string]: string;
+}
+
+let seats = new SeatAssignment();
+seats.A1 = "Mosh";
+seats.A2 = "John";
 ```
