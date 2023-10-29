@@ -162,3 +162,20 @@ class Student extends Person {
   }
 }
 ```
+
+## Abstract classes and methods:
+
+In TypeScript abstract classes and methods offer a means of outlining class blueprints that share features and specifications. The purpose of classes is to be extended by classes allowing them to include abstract methods that must be implemented in subclasses.
+
+```ts
+abstract class Shape {
+  // Abstract methods don't have a body
+  abstract render();
+}
+class Circle extends Shape {
+  override render() {
+    console.log("Rendering a circle");
+  }
+}
+```
+
