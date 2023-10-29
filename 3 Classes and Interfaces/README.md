@@ -150,3 +150,15 @@ class Cat extends Animal {
   }
 }
 ```
+
+## Method overriding:
+
+In TypeScript method overriding refers to the capability of a derived class (subclass) to offer its implementation for a method that already exists in its base class (superclass). This functionality allows the subclass to modify or expand upon the behavior of the inherited method while preserving its name and structure. Method overriding is a concept, in object oriented programming as it facilitates the creation of specialized classes, within a class hierarchy.
+
+```ts
+class Student extends Person {
+  override speak() {
+    console.log("Student speaking");
+  }
+}
+```
