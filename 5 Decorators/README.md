@@ -10,3 +10,29 @@
 - To utilize decorators, in TypeScript `tsconfig` we need to enable the **`experimentalDecorators`** setting.
 
 - It's possible to apply decorators on a class or its members. However keep in mind that when multiple decorators are used together they are applied in order.
+
+## Class decorators:
+
+```ts
+function Component(constructor: Function) {
+  // Here we have a chance to modify members of
+  // the target class.
+  constructor.prototype.uniqueId = Date.now();
+}
+@Component
+class ProfileComponent {}
+```
+
+## Parameterized decorators:
+
+```ts
+function Component(value: number) {
+  return (constructor: Function) => {
+    // Here we have a chance to modify members of
+    // the target class.
+    constructor.prototype.uniqueId = Date.now();
+  };
+}
+@Component(1)
+class ProfileComponent {}
+```
