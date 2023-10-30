@@ -45,3 +45,5 @@ Now that we have a basic understanding of TypeScript and its role in modern web 
 - **Module 2 - [Advanced Types](./2%20Advanced%20Types/README.md) :** Delve into advanced type concepts.
 
 - **Module 3 - [Classes, Interfaces, and Object-oriented Programming](./3%20Classes%20and%20Interfaces/README.md) :** Dive into object-oriented programming principles and best practices.
+
+- **Module 4 - [Generics](./4%20Generics/README.md) :** Explore TypeScript's Generics feature for creating flexible and type-safe code.
