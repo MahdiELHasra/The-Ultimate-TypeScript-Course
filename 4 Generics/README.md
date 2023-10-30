@@ -60,3 +60,68 @@ class SearchableStore<T extends { name: string }> extends Store<T> {}
 // Fixing generic type parameters
 class ProductStore extends Store<Product> {}
 ```
+
+## The keyof operator:
+
+The **_keyof_** operator produces a union of the keys of the given object.
+
+```ts
+interface Product {
+  name: string;
+  price: number;
+}
+let property: keyof Product;
+// Same as
+let property: "name" | "price";
+property = "name";
+property = "price";
+property = "otherValue"; // Invalid
+```
+
+## Type mapping:
+
+Using type mapping we can create new types based off of existing types. For example,
+we can create a new type with all the properties of another type where these properties
+are readonly, optional, etc.
+
+```ts
+type ReadOnly<T> = {
+  readonly [K in keyof T]: T[K];
+};
+type Optional<T> = {
+  [K in keyof T]?: T[K];
+};
+type Nullable<T> = {
+  [K in keyof T]: T[K] | null;
+};
+```
+
+## Utility types:
+
+TypeScript comes with several utility types that perform type mapping for us.
+Examples are: `Partial<T>`, `Required<T>`, `Readonly <T>`, etc.
+
+```ts
+interface Product {
+  id: number;
+  name: string;
+  price: number;
+}
+
+// A Product where all properties are optional
+let product: Partial<Product>;
+
+// A Product where all properties are required
+let product: Required<Product>;
+
+// A Product where all properties are read-only
+let product: Readonly<Product>;
+
+// A Product with two properties only (id and price)
+let product: Pick<Product, "id" | "price">;
+
+// A Product without a name
+let product: Omit<Product, "name">;
+```
+> See the complete list of utility types:
+https://www.typescriptlang.org/docs/handbook/utility-types.html
