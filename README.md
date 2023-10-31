@@ -51,3 +51,6 @@ Now that we have a basic understanding of TypeScript and its role in modern web 
 - **Module 5 - [Decorators](./5%20Decorators/README.md) :** Learn how to use decorators to extend and enhance your code.
 
 - **Module 6 - [Modules](./6%20Modules/README.md) :** Discover how to structure and organize your code effectively using TypeScript modules.
+- **Module 7 - [Integration with JavaScript](./7%20Integration%20with%20JavaScript/README.md) :** Learn how TypeScript can seamlessly integrate with existing JavaScript code.
+
+Get ready to embark on a journey to master TypeScript and enhance your web development skills. Let's dive in!
